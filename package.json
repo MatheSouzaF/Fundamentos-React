@@ -1,0 +1,19 @@
+{
+  "name": "react-fundamentos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src -d build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.28.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
