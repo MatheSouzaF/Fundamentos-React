@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <h1 id="title">
-    <span>Olá Mundo</span>
-  </h1>,
-  document.getElementById("root")
+    <span>Oie Sophia</span>
+  </h1>
 );
