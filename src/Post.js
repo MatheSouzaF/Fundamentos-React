@@ -15,6 +15,7 @@ if(props.read){
         <br />
         <small>{props.subtitle}</small>
         <br />
+        
         Media: {props.likes / 2}
       </article>
       <br />
