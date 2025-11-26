@@ -1,14 +1,37 @@
 import React, { useState } from "react";
 import Post from "./Post";
 import Header from "./Header";
+import {ThemeProvider} from "./ThemeContext";
+
+
 
 function App() {
+
   const [posts, setPosts] = useState([
-    { id: 1, title: "Primeiro post", subtitle: "Meu primeiro post", likes: 30, read: false },
-    { id: 2, title: "Segundo post", subtitle: "Meu segundo post", likes: 20, read: true },
-    { id: 3, title: "Terceiro post", subtitle: "Meu terceiro post", likes: 50, read: true },
+    {
+      id: 1,
+      title: "Primeiro post",
+      subtitle: "Meu primeiro post",
+      likes: 30,
+      read: false,
+    },
+    {
+      id: 2,
+      title: "Segundo post",
+      subtitle: "Meu segundo post",
+      likes: 20,
+      read: false,
+    },
+    {
+      id: 3,
+      title: "Terceiro post",
+      subtitle: "Meu terceiro post",
+      likes: 50,
+      read: true,
+    },
   ]);
-  console.log(posts);
+
+ 
 
   function handleRefresh() {
     // posts.push();
@@ -29,8 +52,9 @@ function App() {
   }
 
   return (
-    <>
-      <Header title="Matheus">
+    <ThemeProvider>
+      <Header
+       >
         <h2>
           Posts da semana
           <button onClick={handleRefresh}>Atualizar</button>
@@ -48,7 +72,7 @@ function App() {
           likes={post.likes}
         />
       ))}
-    </>
+    </ThemeProvider>
   );
 }
 
