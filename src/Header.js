@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import Button from "./Button";
 import { ThemeContext } from "./ThemeContext";
 function Header(props) {
-const {onToggleTheme} = useContext(ThemeContext);
-
-
+  const { onToggleTheme } = useContext(ThemeContext);
 
   return (
     <>
